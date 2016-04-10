@@ -1,7 +1,7 @@
-# angular-D3
-Angular D3
+# Angular-D3
+Angular enabled collection of D3 components from the internet (will update the source soon)
 
-<a href="http://embed.plnkr.co/Ax3vL7L24VlQKCQiAeOv/">Demo</a>
+Click <a href="http://embed.plnkr.co/Ax3vL7L24VlQKCQiAeOv/">here for Demo</a>
 
 # Install
 ```code

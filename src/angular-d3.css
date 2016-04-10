@@ -1,0 +1,156 @@
+﻿/*------------------------------------ Bar Chart*/
+.barChart .bar {
+    fill: steelblue;
+    box-shadow: 2px 2px 2px #666;
+}
+
+.barChart .bar {
+    transition: all 0.25s ease-in;
+    -moz-transition: all 0.25s ease-in;
+    -webkit-transition: all 0.25s ease-in;
+}
+
+    .barChart .bar:hover {
+        fill: brown;
+    }
+
+.barChart .axis {
+    font: 10px sans-serif;
+}
+
+    .barChart .axis path,
+    .barChart .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+    }
+
+.barChart .x.axis path {
+    display: none;
+}
+
+
+/*------------------------------------ Calendar Heat Map*/
+.calendarHeatmap .day {
+  fill: #fff;
+  stroke: #ccc;
+}
+
+.calendarHeatmap .month {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+.calendarHeatmap .RdYlGn .q10-11{fill:rgb(165,0,38)}
+.calendarHeatmap .RdYlGn .q9-11{fill:rgb(215,48,39)}
+.calendarHeatmap .RdYlGn .q8-11{fill:rgb(244,109,67)}
+.calendarHeatmap .RdYlGn .q7-11{fill:rgb(253,174,97)}
+.calendarHeatmap .RdYlGn .q6-11{fill:rgb(254,224,139)}
+.calendarHeatmap .RdYlGn .q5-11{fill:rgb(255,255,191)}
+.calendarHeatmap .RdYlGn .q4-11{fill:rgb(217,239,139)}
+.calendarHeatmap .RdYlGn .q3-11{fill:rgb(166,217,106)}
+.calendarHeatmap .RdYlGn .q2-11{fill:rgb(102,189,99)}
+.calendarHeatmap .RdYlGn .q1-11{fill:rgb(26,152,80)}
+.calendarHeatmap .RdYlGn .q0-11{fill:rgb(0,104,55)}
+
+.calendarHeatmap .day:hover {
+    fill: #ccc;
+}
+
+.calendarHeatmap .day {
+    transition: all 0.25s ease-in;
+    -moz-transition: all 0.25s ease-in;
+    -webkit-transition: all 0.25s ease-in;
+}
+
+/*------------------------------------ Circular Segment*/
+circular-segment .filler {
+    fill: steelblue;
+}
+
+circular-segment .outline {
+    stroke: black;
+    stroke-width: 1.5;
+    fill: none;
+}
+
+/*------------------------------------ Line Chart*/
+line-chart .axis path,
+line-chart .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+line-chart .x.axis path {
+  display: none;
+}
+
+line-chart .line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+/*------------------------------------ Pie Chart*/
+pie-chart .arc text {
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
+
+pie-chart .arc path {
+  stroke: #fff;
+}
+
+/*------------------------------------ Horizontal Tree Chart*/
+horizontal-tree-chart .node {
+		cursor: pointer;
+	}
+
+	horizontal-tree-chart .node circle {
+	  fill: #fff;
+	  stroke: steelblue;
+	  stroke-width: 3px;
+	}
+
+	horizontal-tree-chart .node text {
+	  font: 12px sans-serif;
+	}
+
+	horizontal-tree-chart .link {
+	  fill: none;
+	  stroke: #ccc;
+	  stroke-width: 2px;
+	}
+    
+    
+/*------------------------------------ Tree Chart*/
+tree-chart .node {
+    cursor: default;
+}
+
+tree-chart .node .expandable {
+    cursor: pointer;
+}
+
+tree-chart .node rect {
+    fill: #fff;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+
+tree-chart .node text {
+    font: 10px sans-serif;
+}
+
+tree-chart .link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1.5px;
+}
+
+tree-chart {
+    overflow: hidden;
+    cursor: move;
+}

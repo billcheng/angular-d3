@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Angular D3</title>
+    <link href="src/angular-d3.css" rel="stylesheet" />
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="Ctrl">
+        
+        <div style="wdith: 100%; height: 300px">
+            <tree-chart ng-data="treeChartData1" ng-collapse="true" ng-node-width="150" ng-spacer="50"></tree-chart>
+        </div>
+        
+        <div style="wdith: 100%; height: 300px">
+            <horizontal-tree-chart ng-data="treeChartData2" ng-collapse="true"></horizontal-tree-chart>
+        </div>
+        
+        <div style="width: 100%; height: 300px">
+            <line-chart ng-data="barChartData"></line-chart>
+        </div>
+        <div style="width: 100%; height: 300px">
+            <bar-chart ng-data="barChartData" width="960" height="500"></bar-chart>
+        </div>
+        <div style="width: 100%; height: 300px">
+            <circular-segment ng-data="circleK" radius="150" width="960" height="500"></circular-segment>
+        </div>
+        <calendar-heatmap ng-data="calendarData" width="960" height="136" cell-size="17" class="cal"></calendar-heatmap>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
+    <script src="src/angular-d3.js"></script>
+    <script>
+        angular.module("myApp", ["angular-d3"])
+            .controller("Ctrl", function ($scope, $timeout) {
+
+                //----------------------------------- Bar Chart
+                $scope.barChartData = {
+                    axis: {
+                        x: 'Letter',
+                        y: 'Frequency'
+                    },
+                    data: [{ x: 'A', y: 10 }, { x: 'B', y: 20 }, { x: 'C', y: 30 }]
+                };
+
+                //----------------------------------- Line Chart
+                // $scope.barChartData = {
+                //     axis: {
+                //         x: 'Date',
+                //         y: 'Frequency'
+                //     },
+                //     data: [{ x: 1, label: 'A',  y: 10 }, { x: 2, label: 'B', y: 20 }, { x: 3, label: 'C', y: 15 }]
+                // };
+
+
+                //----------------------------------- Calendar Heatmap
+                $scope.calendarData = {
+                    from: 2016,
+                    to: new Date().getFullYear(),
+                    data: {
+                        '2016-01-02': 3,
+                        '2016-01-03': 5,
+                        '2016-03-25': 0,
+                        '2016-06-13': 0
+                    }
+                };
+
+
+                //----------------------------------- Circular Segment
+                $scope.circleK = 0.1;
+                
+                //----------------------------------- Tree Chart
+                $scope.treeChartData1 =
+                    {
+                        "name": "Top Level",
+                        "children": [
+                            {
+                                "name": "Level 2: A",
+                                "children": [
+                                {
+                                    "name": "Son of A",
+                                },
+                                {
+                                    "name": "Daughter of A",
+                                    "children": [{
+                                        "name": "Grand Daughter"
+                                    }]
+                                }
+                                ]
+                            },
+                            {
+                                "name": "Level 2: B",
+                            }
+                        ]
+                    };
+                    
+                $scope.treeChartData2 = angular.copy($scope.treeChartData1);
+                
+            });
+    </script>
+</body>
+</html>

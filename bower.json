@@ -1,0 +1,11 @@
+{
+    "name": "angular-d3",
+    "version": "0.0.1",
+    "main": "dist/angular-d3.min.js",
+    "ignore": ["src", "bower.json", ".gitignore", "gulpfile.js", "minify.cmd", "package.json"],
+    "dependencies": {
+        "jquery": ">=2.0.0",
+        "angular": ">=1.4.9",
+        "d3": ">=3.5.16"
+    }
+}

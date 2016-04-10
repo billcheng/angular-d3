@@ -5,7 +5,7 @@ Angular D3
 
 # Install
 ```code
-bower install angular-d3
+bower install angular-d3-components
 ```
 
 # CSS

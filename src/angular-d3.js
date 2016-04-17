@@ -670,12 +670,12 @@
                             })
                             .style("fill", function (d) {
                                 return d._children ? "lightsteelblue" : "#fff";
-                            })
-                            .append("title")
-                                .text(function(d){
-                                    return d.title==null?"": d.title;
-                                });
+                            });
                         
+                        nodeEnter.append("title")
+                            .text(function(d){
+                                return d.title==null?"":d.title;
+                            });
 
                         nodeEnter.append("text")
                             .attr("x", rectW / 2)

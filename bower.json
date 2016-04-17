@@ -1,6 +1,6 @@
 {
     "name": "angular-d3-components",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "main": "dist/angular-d3.min.js",
     "ignore": ["src", "bower.json", ".gitignore", "gulpfile.js", "minify.cmd", "package.json"],
     "dependencies": {
